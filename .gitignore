@@ -19,6 +19,10 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
+#UltraEdit
+*.prj
+*.pui
+
 # Our automatic versioning scheme generates the following file
 # NEVER put it in the repository
 _Version.h

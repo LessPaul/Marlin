@@ -79,7 +79,7 @@
 //
 #define X_MIN_PIN           3
 #ifndef X_MAX_PIN
-  #define X_MAX_PIN         2
+  #define X_MAX_PIN         -1
 #endif
 #define Y_MIN_PIN          14
 #define Y_MAX_PIN          15
@@ -222,7 +222,7 @@
 
 // RAMPS 1.4 DIO 4 on the servos connector
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN    4
+  #define FIL_RUNOUT_PIN    2
 #endif
 
 #ifndef PS_ON_PIN
@@ -432,7 +432,7 @@
       #endif
 
       #define BTN_ENC           35
-      #define SD_DETECT_PIN     49
+      #define SD_DETECT_PIN     -1  // PRH
       #define KILL_PIN          41
 
       #if ENABLED(BQ_LCD_SMART_CONTROLLER)
@@ -461,7 +461,7 @@
       #define BTN_ENC           -1
 
       #define LCD_SDSS          SDSS
-      #define SD_DETECT_PIN     49
+      #define SD_DETECT_PIN     -1
 
     #elif ENABLED(VIKI2) || ENABLED(miniVIKI)
 

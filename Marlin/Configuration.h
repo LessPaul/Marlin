@@ -75,7 +75,7 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "(Paul, YorkiePrint2020)" // Who made the changes. PRH
 #define SHOW_BOOTSCREEN
-#define STRING_SPLASH_LINE1 "Yorkie Build 1.1" // will be shown during bootup in line 1
+#define STRING_SPLASH_LINE1 "Yorkie 1.3" // will be shown during bootup in line 1
 #define STRING_SPLASH_LINE2 WEBSITE_URL         // will be shown during bootup in line 2
 
 /**
@@ -132,7 +132,8 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RAMPS_14_EFB
+  #define MOTHERBOARD BOARD_RAMPS_CREALITY              // PRH
+  //#define MOTHERBOARD BOARD_RAMPS_14_EFB
 #endif
 
 // Optional custom name for your RepStrap or other custom machine
@@ -689,7 +690,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 }  // CR10s
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 420 }  // CR10s BMG CLONE
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -959,7 +960,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true  // PRH BMG Extruder
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1035,6 +1036,7 @@
 #define FILAMENT_RUNOUT_SENSOR    // CR10s
 #if ENABLED(FILAMENT_RUNOUT_SENSOR)
   #define NUM_RUNOUT_SENSORS   1     // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
+  #define FIL_RUNOUT_PIN 2
   #define FIL_RUNOUT_INVERTING true // set to true to invert the logic of the sensor.  // CR10s
   #define FIL_RUNOUT_PULLUP          // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN      // Use internal pulldown for filament runout pins.
